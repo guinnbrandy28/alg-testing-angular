@@ -1,0 +1,20 @@
+<div class="p-4 p-md-10 mb-4 text-white rounded bg-dark">
+    <div class="col-md-10 px-0">
+      <h1 class="display-6 fst-italic" data-joke-page-title >{{title}}</h1>
+      <p class="lead my-2" >{{message}}</p>
+    </div>
+  </div>
+  <hr />
+  <div class="row mb-2" *ngFor="let joke of jokes">
+    <div class="col-md-12" data-joke-container>
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <span class="mb-0" data-joke-title>Title: {{joke.title}}</span>
+        <div class="col p-4 d-flex flex-column position-static">
+          
+          <span class="mb-1" data-joke-category>Category: {{joke.category}}</span>
+          <h3 class="card-text mb-auto" data-joke-content>{{joke.content}}</h3>
+          <hr />
+        </div>          
+      </div>
+    </div>
+  </div>  
