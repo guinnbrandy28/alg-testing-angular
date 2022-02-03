@@ -74,4 +74,11 @@ describe('AppComponent', () => {
     );
   });
 
+  it("should render 2 jokes", () => {
+    const compiled = fixture.debugElement.nativeElement;
+    //console.log(compiled.querySelectorAll("[data-joke-container]"));
+    const jokes = compiled.querySelectorAll("[data-joke-container]");
+    expect(jokes.length).toEqual(2);
+  });
+
 });
